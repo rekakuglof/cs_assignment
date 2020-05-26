@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Sun May 24 18:00:41 BST 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0172-47a1-1d18-000007600000 
-on database directory /Users/rekakuglof/cs_assignment/catshop.db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@512ddf17 
+Tue May 26 16:15:29 BST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0172-518d-8606-000007c16c00 
+on database directory /Users/rekakuglof/IdeaProjects/cs_assignment/catshop.db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@512ddf17 
 Loaded from file:/Users/rekakuglof/Downloads/db-derby-10.14.2.0-lib/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=11.0.2+9-LTS
-user.dir=/Users/rekakuglof/cs_assignment
+user.dir=/Users/rekakuglof/IdeaProjects/cs_assignment
 os.name=Mac OS X
 os.arch=x86_64
 os.version=10.15.2
