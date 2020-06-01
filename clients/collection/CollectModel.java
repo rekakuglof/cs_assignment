@@ -82,6 +82,7 @@ public class CollectModel extends Observable
 
   private void refund(int anyItem) {
     if(PickModel.integerDoubleTreeMap.containsKey(anyItem)) {
+
 //      JOptionPane.showMessageDialog(null, "Refund: " +
 //              PickModel.integerDoubleTreeMap.get(anyItem), "Refund", JOptionPane.PLAIN_MESSAGE);
       JOptionPane.showMessageDialog(null, "Refund: £"+PickModel.integerDoubleTreeMap.get(anyItem));
