@@ -1,11 +1,9 @@
 package clients.collection;
 
-import clients.warehousePick.PickModel;
 import debug.DEBUG;
 import middle.MiddleFactory;
 import middle.OrderProcessing;
 
-import javax.swing.*;
 import java.util.Observable;
 
 /**
@@ -26,17 +24,17 @@ public class CollectModel extends Observable
    */
   public CollectModel(MiddleFactory mf)
   {
-    try                                           //
-    {
+    try                                           // 
+    {      
       theOrder = mf.makeOrderProcessing();        // Process order
     } catch ( Exception e )
     {
       DEBUG.error("%s\n%s",
-              "CollectModel.constructor\n%s",
-              e.getMessage() );
+       "CollectModel.constructor\n%s", 
+        e.getMessage() );
     }
   }
-
+  
   /**
    * Check if the product is in Stock
    * @param orderNumber The order to be collected
@@ -49,17 +47,14 @@ public class CollectModel extends Observable
     {
       orderNum = Integer.parseInt(on);       // Convert
     }
-    catch ( Exception err)
+    catch ( Exception err) 
     {
       // Convert invalid order number to 0
     }
-    //Call it after orderNum conversion
-    refund(orderNum);
-
     try
     {
-      boolean ok =
-              theOrder.informOrderCollected( orderNum );
+      boolean ok = 
+       theOrder.informOrderCollected( orderNum );
       if ( ok )
       {
         theAction = "";
@@ -73,20 +68,11 @@ public class CollectModel extends Observable
     } catch ( Exception e )
     {
       theOutput = String.format( "%s\n%s",
-              "Error connection to order processing system",
-              e.getMessage() );
+                   "Error connection to order processing system",
+                   e.getMessage() );
       theAction = "!!!Error";
     }
     setChanged(); notifyObservers(theAction);
-  }
-
-  private void refund(int anyItem) {
-    if(PickModel.integerDoubleTreeMap.containsKey(anyItem)) {
-//      JOptionPane.showMessageDialog(null, "Refund: " +
-//              PickModel.integerDoubleTreeMap.get(anyItem), "Refund", JOptionPane.PLAIN_MESSAGE);
-      JOptionPane.showMessageDialog(null, "Refund: £"+PickModel.integerDoubleTreeMap.get(anyItem));
-      PickModel.integerDoubleTreeMap.remove(anyItem);
-    }
   }
 
   /**
@@ -97,5 +83,5 @@ public class CollectModel extends Observable
   {
     return theOutput;
   }
-
+  
 }
