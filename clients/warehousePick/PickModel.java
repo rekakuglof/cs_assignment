@@ -8,6 +8,7 @@ import middle.OrderProcessing;
 import middle.StockReadWriter;
 
 import java.util.Observable;
+import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -24,6 +25,9 @@ public class PickModel extends Observable
   private String          theAction  = "";
   
   private StateOf         worker   = new StateOf();
+
+  public static TreeMap<Integer,Double> integerDoubleTreeMap = new TreeMap<Integer, Double>();
+
 
   /*
    * Construct the model of the warehouse pick client
